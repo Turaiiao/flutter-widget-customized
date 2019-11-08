@@ -2,3 +2,5 @@
 The customized widget for flutter framework.
 
 ### LinearDetailsView
+
+### ProgressDialogView
