@@ -35,9 +35,15 @@ class BannerViewState extends State<BannerView> {
   String url;
 
   startTimer() {
+    int index = 0;
     Timer.periodic(widget.duration, (data) {
       setState(() {
-        url = widget.imageUrlList[Random().nextInt(widget.imageUrlList.length)];
+        url = widget.imageUrlList[index];
+        if (index + 1 == widget.imageUrlList.length) {
+          index = 0;
+        } else {
+          index ++;
+        }
       });
     });
   }
